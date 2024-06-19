@@ -1,8 +1,8 @@
 // CaptchaComponent.js
 import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
+import './index.css';
 import useCaptcha from './useCaptcha';
-
 const AwesomeCaptcha = ({ onValidate,className }) => {
     const { captcha, generateCaptcha } = useCaptcha();
     const [userInput, setUserInput] = useState('');
@@ -32,7 +32,7 @@ const AwesomeCaptcha = ({ onValidate,className }) => {
                     <input
                         disabled
                         type="text"
-                        className='px-4 py-2 rounded-lg bg-transparent border border-[#E4E5E8] focus:outline-none italic tracking-widest'
+                        className='px-4 py-2 rounded-lg bg-transparent border border-[#E4E5E8] focus:outline-none italic tracking-widest off'
                         style={{userSelect:'none'}}
                         name='captcha'
                         value={captcha}

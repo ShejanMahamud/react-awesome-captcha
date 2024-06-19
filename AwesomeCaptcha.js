@@ -7,6 +7,7 @@ Object.defineProperty(exports, "__esModule", {
 exports["default"] = void 0;
 var _propTypes = _interopRequireDefault(require("prop-types"));
 var _react = _interopRequireWildcard(require("react"));
+require("./index.css");
 var _useCaptcha2 = _interopRequireDefault(require("./useCaptcha"));
 function _getRequireWildcardCache(e) { if ("function" != typeof WeakMap) return null; var r = new WeakMap(), t = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(e) { return e ? t : r; })(e); }
 function _interopRequireWildcard(e, r) { if (!r && e && e.__esModule) return e; if (null === e || "object" != _typeof(e) && "function" != typeof e) return { "default": e }; var t = _getRequireWildcardCache(r); if (t && t.has(e)) return t.get(e); var n = { __proto__: null }, a = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var u in e) if ("default" !== u && {}.hasOwnProperty.call(e, u)) { var i = a ? Object.getOwnPropertyDescriptor(e, u) : null; i && (i.get || i.set) ? Object.defineProperty(n, u, i) : n[u] = e[u]; } return n["default"] = e, t && t.set(e, n), n; }
@@ -18,7 +19,8 @@ function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length)
 function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t["return"] && (u = t["return"](), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
 function _arrayWithHoles(r) { if (Array.isArray(r)) return r; } // CaptchaComponent.js
 var AwesomeCaptcha = function AwesomeCaptcha(_ref) {
-  var onValidate = _ref.onValidate;
+  var onValidate = _ref.onValidate,
+    className = _ref.className;
   var _useCaptcha = (0, _useCaptcha2["default"])(),
     captcha = _useCaptcha.captcha,
     generateCaptcha = _useCaptcha.generateCaptcha;
@@ -45,7 +47,7 @@ var AwesomeCaptcha = function AwesomeCaptcha(_ref) {
     }
   };
   return /*#__PURE__*/_react["default"].createElement("div", null, /*#__PURE__*/_react["default"].createElement("div", {
-    className: "w-full flex gap-5 items-start"
+    className: "w-full flex gap-5 items-start ".concat(className)
   }, /*#__PURE__*/_react["default"].createElement("div", {
     className: "flex flex-col items-start gap-2 mt-5"
   }, /*#__PURE__*/_react["default"].createElement("h1", {
@@ -53,7 +55,7 @@ var AwesomeCaptcha = function AwesomeCaptcha(_ref) {
   }, "Recaptcha"), /*#__PURE__*/_react["default"].createElement("input", {
     disabled: true,
     type: "text",
-    className: "px-4 py-2 rounded-lg bg-transparent border border-[#E4E5E8] focus:outline-none italic tracking-widest",
+    className: "px-4 py-2 rounded-lg bg-transparent border border-[#E4E5E8] focus:outline-none italic tracking-widest off",
     style: {
       userSelect: 'none'
     },
