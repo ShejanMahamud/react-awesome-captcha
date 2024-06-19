@@ -1,7 +1,3 @@
-Certainly! Here's an updated README.md file that includes explanations for the `captcha` and `generateCaptcha` utilities:
-
----
-
 # react-awesome-captcha
 
 `react-awesome-captcha` is a simple and customizable React CAPTCHA component designed to validate user inputs in a user-friendly manner. It generates random CAPTCHA strings and provides visual cues for input validity.
@@ -9,7 +5,6 @@ Certainly! Here's an updated README.md file that includes explanations for the `
 ## Features
 
 - **Generate CAPTCHA**: Automatically generates a random CAPTCHA string.
-- **Input Validation**: Indicates input validity with green (valid) and red (invalid) border colors.
 - **Easy Integration**: Seamless integration into any React project.
 - **Customizable**: Customize styles and behavior according to your application's needs.
 
@@ -19,12 +14,6 @@ You can install `react-awesome-captcha` using npm:
 
 ```sh
 npm install react-awesome-captcha
-```
-
-or using yarn:
-
-```sh
-yarn add react-awesome-captcha
 ```
 
 ## Usage
@@ -59,6 +48,7 @@ export default App;
 ### Props
 
 - **`onValidate` (function)**: A callback function that receives a boolean indicating whether the user input matches the CAPTCHA.
+- **`className` (tailwind style)**: Add tailwind css classes for styling
 
 ### Example: Using `captcha` and `generateCaptcha` Utilities
 

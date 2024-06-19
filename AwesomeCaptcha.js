@@ -53,7 +53,10 @@ var AwesomeCaptcha = function AwesomeCaptcha(_ref) {
   }, "Recaptcha"), /*#__PURE__*/_react["default"].createElement("input", {
     disabled: true,
     type: "text",
-    className: "px-4 py-2 rounded-lg bg-transparent border border-[#E4E5E8] focus:outline-none italic tracking-widest select-none",
+    className: "px-4 py-2 rounded-lg bg-transparent border border-[#E4E5E8] focus:outline-none italic tracking-widest",
+    style: {
+      userSelect: 'none'
+    },
     name: "captcha",
     value: captcha
   }), /*#__PURE__*/_react["default"].createElement("h1", {
@@ -65,8 +68,11 @@ var AwesomeCaptcha = function AwesomeCaptcha(_ref) {
     className: "text-sm text-[#18191C]"
   }, "Submit Recaptcha"), /*#__PURE__*/_react["default"].createElement("input", {
     type: "text",
-    className: "px-4 py-2 rounded-lg bg-transparent border ".concat(isValid ? "border-green-500" : "border-red-500", " focus:outline-none"),
+    className: "px-4 py-2 rounded-lg bg-transparent focus:outline-none",
     name: "recaptcha",
+    style: {
+      border: "2px solid ".concat(isValid ? "#10B981" : "#EF4444")
+    },
     required: true,
     placeholder: "Enter Captcha",
     value: userInput,
