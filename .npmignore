@@ -4,3 +4,6 @@ CaptchaComponent.test.js
 jest.config.js
 setupTests.js
 src
+postcss.config.js
+Readme.md
+tailwind.config.js

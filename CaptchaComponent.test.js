@@ -1,13 +1,13 @@
 import '@testing-library/jest-dom';
 import { fireEvent, render, screen } from '@testing-library/react';
 import React from 'react';
-import CaptchaComponent from './lib/Captcha';
-import useCaptcha from './lib/useCaptcha';
+import AwesomeCaptcha from './AwesomeCaptcha';
+import useCaptcha from './useCaptcha';
 
 // Mock the useCaptcha hook
 jest.mock('./lib/useCaptcha.js');
 
-describe('CaptchaComponent', () => {
+describe('AwesomeCaptcha', () => {
   const mockGenerateCaptcha = jest.fn();
   const captchaValue = 'abc123';
 
@@ -24,7 +24,7 @@ describe('CaptchaComponent', () => {
 
   test('renders captcha and handles user input correctly', () => {
     const handleValidate = jest.fn();
-    render(<CaptchaComponent onValidate={handleValidate} />);
+    render(<AwesomeCaptcha onValidate={handleValidate} />);
 
     // Check that the captcha is displayed
     const captchaInput = screen.getByDisplayValue(captchaValue);
@@ -44,13 +44,13 @@ describe('CaptchaComponent', () => {
 
   test('calls generateCaptcha on mount', () => {
     const handleValidate = jest.fn();
-    render(<CaptchaComponent onValidate={handleValidate} />);
+    render(<AwesomeCaptcha onValidate={handleValidate} />);
     expect(mockGenerateCaptcha).toHaveBeenCalled();
   });
 
   test('calls generateCaptcha on reset click', () => {
     const handleValidate = jest.fn();
-    render(<CaptchaComponent onValidate={handleValidate} />);
+    render(<AwesomeCaptcha onValidate={handleValidate} />);
 
     const resetButton = screen.getByText('Reset Recaptcha');
     fireEvent.click(resetButton);

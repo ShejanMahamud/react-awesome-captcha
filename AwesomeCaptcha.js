@@ -17,7 +17,7 @@ function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) 
 function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
 function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t["return"] && (u = t["return"](), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
 function _arrayWithHoles(r) { if (Array.isArray(r)) return r; } // CaptchaComponent.js
-var CaptchaComponent = function CaptchaComponent(_ref) {
+var AwesomeCaptcha = function AwesomeCaptcha(_ref) {
   var onValidate = _ref.onValidate;
   var _useCaptcha = (0, _useCaptcha2["default"])(),
     captcha = _useCaptcha.captcha,
@@ -26,7 +26,7 @@ var CaptchaComponent = function CaptchaComponent(_ref) {
     _useState2 = _slicedToArray(_useState, 2),
     userInput = _useState2[0],
     setUserInput = _useState2[1];
-  var _useState3 = (0, _react.useState)(null),
+  var _useState3 = (0, _react.useState)(false),
     _useState4 = _slicedToArray(_useState3, 2),
     isValid = _useState4[0],
     setIsValid = _useState4[1];
@@ -53,19 +53,19 @@ var CaptchaComponent = function CaptchaComponent(_ref) {
   }, "Recaptcha"), /*#__PURE__*/_react["default"].createElement("input", {
     disabled: true,
     type: "text",
-    className: "px-4 py-2 rounded-lg bg-transparent border border-[#E4E5E8] focus:outline-none italic tracking-widest",
+    className: "px-4 py-2 rounded-lg bg-transparent border border-[#E4E5E8] focus:outline-none italic tracking-widest select-none",
     name: "captcha",
     value: captcha
   }), /*#__PURE__*/_react["default"].createElement("h1", {
     onClick: generateCaptcha,
-    className: "text-sm text-primary cursor-pointer"
+    className: "text-sm text-primary cursor-pointer select-none"
   }, "Reset Recaptcha")), /*#__PURE__*/_react["default"].createElement("div", {
     className: "flex flex-col items-start gap-2 mt-5"
   }, /*#__PURE__*/_react["default"].createElement("h1", {
     className: "text-sm text-[#18191C]"
   }, "Submit Recaptcha"), /*#__PURE__*/_react["default"].createElement("input", {
     type: "text",
-    className: "px-4 py-2 rounded-lg bg-transparent border ".concat(isValid === null ? 'border-[#E4E5E8]' : isValid ? 'border-green-500' : 'border-red-500', " focus:outline-none"),
+    className: "px-4 py-2 rounded-lg bg-transparent border ".concat(isValid ? "border-green-500" : "border-red-500", " focus:outline-none"),
     name: "recaptcha",
     required: true,
     placeholder: "Enter Captcha",
@@ -73,7 +73,7 @@ var CaptchaComponent = function CaptchaComponent(_ref) {
     onChange: handleChange
   }))));
 };
-CaptchaComponent.propTypes = {
+AwesomeCaptcha.propTypes = {
   onValidate: _propTypes["default"].func.isRequired
 };
-var _default = exports["default"] = CaptchaComponent;
+var _default = exports["default"] = AwesomeCaptcha;
