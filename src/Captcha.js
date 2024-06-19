@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
 import useCaptcha from './useCaptcha';
 
-const CaptchaComponent = ({ onValidate }) => {
+const Captcha = ({ onValidate }) => {
     const { captcha, generateCaptcha } = useCaptcha();
     const [userInput, setUserInput] = useState('');
-    const [isValid, setIsValid] = useState(null);
+    const [isValid, setIsValid] = useState(false);
 
     useEffect(() => {
         generateCaptcha();
@@ -42,7 +42,7 @@ const CaptchaComponent = ({ onValidate }) => {
                     <h1 className='text-sm text-[#18191C]'>Submit Recaptcha</h1>
                     <input
                         type="text"
-                        className={`px-4 py-2 rounded-lg bg-transparent border ${isValid === null ? 'border-[#E4E5E8]' : isValid ? 'border-green-500' : 'border-red-500'} focus:outline-none`}
+                        className={`px-4 py-2 rounded-lg bg-transparent border ${isValid ? 'border-green-500' : 'border-red-500'} focus:outline-none`}
                         name='recaptcha'
                         required
                         placeholder='Enter Captcha'
@@ -55,8 +55,8 @@ const CaptchaComponent = ({ onValidate }) => {
     );
 };
 
-CaptchaComponent.propTypes = {
+Captcha.propTypes = {
     onValidate: PropTypes.func.isRequired
 };
 
-export default CaptchaComponent;
+export default Captcha;

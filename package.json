@@ -1,20 +1,42 @@
 {
-  "name": "react-captcha",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "react-awesome-captcha",
+  "version": "1.0.1",
+  "description": "A awesome captcha component for react js",
+  "main": "/lib/index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "babel src --out-dir lib"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ShejanMahamud/react-awesome-captcha.git"
+  },
+  "keywords": [
+    "react recaptcha",
+    "react captcha",
+    "recaptcha react",
+    "react simple captcha",
+    "react awesome captcha"
+  ],
+  "author": "Shejan Mahamud",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ShejanMahamud/react-awesome-captcha/issues"
+  },
   "dependencies": {
     "prop-types": "^15.8.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
+  },
+  "homepage": "https://github.com/ShejanMahamud/react-awesome-captcha",
   "devDependencies": {
+    "@babel/cli": "^7.24.7",
     "@babel/core": "^7.24.7",
     "@babel/preset-env": "^7.24.7",
     "@babel/preset-react": "^7.24.7",

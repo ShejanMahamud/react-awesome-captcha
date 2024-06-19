@@ -1,11 +1,11 @@
 import '@testing-library/jest-dom';
 import { fireEvent, render, screen } from '@testing-library/react';
 import React from 'react';
-import CaptchaComponent from './CaptchaComponent';
-import useCaptcha from './useCaptcha';
+import CaptchaComponent from './lib/Captcha';
+import useCaptcha from './lib/useCaptcha';
 
 // Mock the useCaptcha hook
-jest.mock('./useCaptcha');
+jest.mock('./lib/useCaptcha.js');
 
 describe('CaptchaComponent', () => {
   const mockGenerateCaptcha = jest.fn();
