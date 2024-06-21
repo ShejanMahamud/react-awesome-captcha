@@ -48,7 +48,10 @@ export default App;
 ### Props
 
 - **`onValidate` (function)**: A callback function that receives a boolean indicating whether the user input matches the CAPTCHA.
+
 - **`className` (tailwind style)**: Add tailwind css classes for styling
+
+- **`vertical` (boolean)**: Vertical Captcha Form
 
 ### Example: Using `captcha` and `generateCaptcha` Utilities
 

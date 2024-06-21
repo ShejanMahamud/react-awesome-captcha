@@ -1,3 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+ES:wght@100..400&display=swap");
+
 .off {
-  user-select: none;
+  user-select: none !important;
+  font-family: "Playwrite ES";
+  font-style: italic;
+  letter-spacing: 5px;
+}
+.border-red-500 {
+  border: 1px solid rgb(239 68 68);
+}
+.border-green-500 {
+  border: 1px solid rgb(34 197 94);
+}
+.border-ini {
+  border: 1px solid #e4e5e8;
 }

@@ -20,7 +20,8 @@ function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" !=
 function _arrayWithHoles(r) { if (Array.isArray(r)) return r; } // CaptchaComponent.js
 var AwesomeCaptcha = function AwesomeCaptcha(_ref) {
   var onValidate = _ref.onValidate,
-    className = _ref.className;
+    className = _ref.className,
+    vertical = _ref.vertical;
   var _useCaptcha = (0, _useCaptcha2["default"])(),
     captcha = _useCaptcha.captcha,
     generateCaptcha = _useCaptcha.generateCaptcha;
@@ -47,41 +48,36 @@ var AwesomeCaptcha = function AwesomeCaptcha(_ref) {
     }
   };
   return /*#__PURE__*/_react["default"].createElement("div", null, /*#__PURE__*/_react["default"].createElement("div", {
-    className: "w-full flex gap-5 items-start ".concat(className)
+    className: "w-full flex items-start ".concat(className, " ").concat(vertical ? 'flex-col gap-2' : 'flex-row gap-5')
   }, /*#__PURE__*/_react["default"].createElement("div", {
-    className: "flex flex-col items-start gap-2 mt-5"
+    className: "flex flex-col items-start gap-2 mt-5 no-select"
   }, /*#__PURE__*/_react["default"].createElement("h1", {
     className: "text-sm text-[#18191C]"
-  }, "Recaptcha"), /*#__PURE__*/_react["default"].createElement("input", {
+  }, "Captcha"), /*#__PURE__*/_react["default"].createElement("input", {
     disabled: true,
     type: "text",
     className: "px-4 py-2 rounded-lg bg-transparent border border-[#E4E5E8] focus:outline-none italic tracking-widest off",
-    style: {
-      userSelect: 'none'
-    },
     name: "captcha",
     value: captcha
   }), /*#__PURE__*/_react["default"].createElement("h1", {
     onClick: generateCaptcha,
     className: "text-sm text-primary cursor-pointer select-none"
-  }, "Reset Recaptcha")), /*#__PURE__*/_react["default"].createElement("div", {
+  }, "Reset Captcha")), /*#__PURE__*/_react["default"].createElement("div", {
     className: "flex flex-col items-start gap-2 mt-5"
   }, /*#__PURE__*/_react["default"].createElement("h1", {
     className: "text-sm text-[#18191C]"
-  }, "Submit Recaptcha"), /*#__PURE__*/_react["default"].createElement("input", {
+  }, "Submit Captcha"), /*#__PURE__*/_react["default"].createElement("input", {
     type: "text",
-    className: "px-4 py-2 rounded-lg bg-transparent focus:outline-none",
-    name: "recaptcha",
-    style: {
-      border: "2px solid ".concat(isValid ? "#10B981" : "#EF4444")
-    },
-    required: true,
-    placeholder: "Enter Captcha",
+    className: "px-4 py-2 rounded-lg bg-transparent border focus:outline-none ".concat(userInput && isValid ? 'border-green-500' : 'border-ini'),
+    name: "captcha",
     value: userInput,
-    onChange: handleChange
+    onChange: handleChange,
+    placeholder: "Enter Captcha"
   }))));
 };
 AwesomeCaptcha.propTypes = {
-  onValidate: _propTypes["default"].func.isRequired
+  onValidate: _propTypes["default"].func.isRequired,
+  className: _propTypes["default"].string,
+  vertical: _propTypes["default"].bool
 };
 var _default = exports["default"] = AwesomeCaptcha;
