@@ -1,11 +1,17 @@
-# react-awesome-captcha (Deprecated)
+🚨 **Heads Up! Important Update!** 🚨
 
-🚨 **Important Notice:** This package has been replaced with a new and improved version:  
-👉 **[ReCAPTZ - Modern CAPTCHA for React](https://www.npmjs.com/package/recaptz)**  
+⚠️ **`react-awesome-captcha` is now DEPRECATED** ⚠️  
+This package is no longer actively maintained, and we strongly recommend migrating to the **new and improved** solution for better performance, security, and customization options:
 
-`react-awesome-captcha` is no longer actively maintained. Please migrate to `ReCAPTZ` for better performance, security, and customization options.
+👉 **[ReCAPTZ - Modern CAPTCHA for React](https://www.npmjs.com/package/recaptz)**
 
-`react-awesome-captcha` is a simple and customizable React CAPTCHA component designed to validate user inputs in a user-friendly manner. It generates random CAPTCHA strings and provides visual cues for input validity.
+💥 Why switch?
+- **Faster & more reliable**  
+- **Enhanced security**  
+- **Advanced customization**  
+- **Typescript Support**
+
+🔧 Don't wait! Update now to stay up-to-date with the latest features and improvements. Thank you for using React Awesome Captcha!
 
 
 ## Features
